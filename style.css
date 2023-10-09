@@ -1,0 +1,256 @@
+:root,:root.light {
+    --buttonColour: #2196f3;
+    --bg-color: #86e9f1;
+    --white: #ffffff;
+    --green-yellow:greenyellow;
+    --logo-colour:green;
+    --text-colour: #000000;
+    --placeholder-colour: #003f2d;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+
+}
+:root.dark{
+    --bg-color: rgba(6, 54, 69, 0.86);
+    --buttonColour: #aec3d7;
+    --green-yellow: #f8de5f;
+    --logo-colour: #9eff93;
+    --text-colour: #eeaffd;
+    --placeholder-colour:white;
+}
+body{
+    background-color: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 70px;
+    align-items: center;
+}
+#websiteName{
+    color: var(--logo-colour);
+    font-size: 1.9rem;
+    text-shadow: 0 0 10px red;
+    margin-left: 20px;
+}
+.textInput{
+    background-color: inherit;
+    border: 0;
+    width: 250px;
+    height: 40px;
+    box-shadow: 0 0 10px red;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--placeholder-colour);
+}
+.submitButton{
+    background-color:var(--buttonColour);
+    border: 0;
+    width: auto;
+    height: 40px;
+    box-shadow: 0 0 10px green;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+.submitButton:hover{
+    background-color:var(--green-yellow);
+}
+button{
+    box-shadow: 0 0 10px whitesmoke;
+}
+.toggleSwitch {
+    position: relative;
+    width: 180px;
+    margin-top: -75px;
+}
+
+.toggleSwitchLabel {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.toggleSwitchInput {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.toggleSwitchInput:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: inset 28px -4px 0 0 var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+.toggleSwitchInput:checked ~ .slider::before {
+    transform: translateX(95px);
+    background-color: var(--dark);
+    box-shadow: none;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+#allSongDiv {
+    width: 25vw;
+}
+.filterSongs label{
+    font-size: 1.2rem;
+    color: var(--logo-colour);
+
+}
+#selectGenre{
+    border: 0;
+    background-color: inherit;
+    box-shadow: 0 0 10px green;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    color: var(--text-colour);
+    font-size: 1.2rem;
+}
+#allSongDivHeading{
+    font-size: 1.3rem;
+    color: var(--text-colour);
+}
+#songList {
+    display: flex;
+    flex-direction: column;
+}
+
+#songList .songButton,.playlistContent .songButton {
+    width: 90%;
+    background-color: var(--buttonColour);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#cardDiv {
+    width: 35vw;
+}
+
+#songDetails {
+    width: 90%;
+    background-color: var(--buttonColour);
+    padding: 3%;
+    border-radius: 20px;
+    box-shadow: 0 0 2px white;
+}
+#songDetails img{
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px white;
+    aspect-ratio: 1/1;
+}
+#songSearchResult{
+    position: absolute;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--green-yellow);
+    border-radius: 10px;
+}
+#songSearchResult span{
+    text-align: center;
+}
+#songSearchResult button {
+    width: auto;
+    background-color: var(--buttonColour);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    margin: 10px 20px 10px 20px;
+    transition: all ease-in-out 1s;
+}
+.audio{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+}
+#playlistDiv{
+    width: 30vw;
+}
+#currentPlaylistName{
+    color: var(--buttonColour);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px greenyellow;
+}
+.currentPlaylistSongsDiv{
+    display: flex;
+}
+.removeSong{
+    width: 15%;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+#previousNextContainer{
+    display: flex;
+    justify-content: center;
+}
+#backward,#forward{
+margin: 10px;
+}
+#addPlaylist{
+    display: block;
+    margin: 0 auto;
+}
+.audioControl{
+    color: var(--buttonColour);
+    font-size: 1.4rem;
+    background-color: var(--green-yellow);
+    border: 0;
+    border-radius: 10px;
+}
+.searchBarDivider{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border: solid 2px black;
+}
+.playlistHeader{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-colour);
+}

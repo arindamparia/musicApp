@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music App</title>
+    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+    <div id="websiteName">Musify</div>
+    <form id="searchBox" class="searchBox">
+        <input id="searchTextInput" class="textInput" type="text" placeholder="search for music or playlist" required>
+        <button type="submit" id="searchBtn" class = "submitButton">Search</button>
+    </form>
+    <div class = 'toggleSwitch'>
+        <label class="toggleSwitchLabel">
+            <input type = 'checkbox' class="toggleSwitchInput">
+            <span class = 'slider'></span>
+        </label>
+    </div>
+</header>
+<div id="container">
+    <div id="songSearchResult"></div>
+    <div id="allSongDiv">
+        <div class="filterSongs">
+            <label for="selectGenre">
+                Filter by Genre:
+            </label>
+            <select name="selectGenre" id="selectGenre">
+                <option>All Songs</option>
+            </select>
+        </div>
+        <div id="allSongDivHeading">All Songs</div>
+        <div id="songList"></div>
+    </div>
+    <div id="cardDiv">
+        <div id="songDetails">
+            <img id="songImage" alt="songImage">
+            <h2 id="songTitle"></h2>
+            <h4 id="songArtist"></h4>
+        </div>
+        <audio controls class="audio">
+            <source type="audio/mpeg">
+        </audio>
+        <div id="cardDivBottom">
+            <div id="previousNextContainer">
+                <button id="backward" class="audioControl"><i class="fa-solid fa-backward-step"></i></button>
+                <button id="forward" class="audioControl"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+            <button id="addPlaylist" class="audioControl">Add To Playlist</button>
+        </div>
+    </div>
+    <div id="playlistDiv">
+        <form id="createPlaylist" class="createPlaylist">
+            <input id="createPlaylistTextInput" class="textInput" type="text" placeholder="Enter Playlist Name" required>
+            <button type="submit" id="createPlaylistBtn" class = "submitButton">Create Playlist</button>
+        </form>
+        <div id="currentPlaylistContainer" class="playlistContainer">
+            <h3 class="playlistHeader">Current Playlist</h3>
+            <span id="currentPlaylistName">No Playlist Selected</span>
+            <div id="currentPlaylistSongs" class="playlistContent"></div>
+        </div>
+        <div id="allPlaylistContainer" class="playlistContainer">
+            <h3 class="playlistHeader">All Playlists</h3>
+            <div id="allPlaylist" class="playlistContent"></div>
+        </div>
+    </div>
+</div>
+<script src = 'index.js'></script>
+</body>
+</html>
+
+
+
