@@ -1,3 +1,5 @@
+//This code is live on musicbyarindam.netlify.app
+
 const songsData = [
   {
     id: 1,
@@ -282,3 +284,11 @@ document.querySelector(".toggleSwitchLabel").addEventListener("change", () => {
   }
   ifLight = !ifLight;
 });
+
+//Check Connectivity
+window.addEventListener("offline", function() {
+  document.querySelector('.connected').textContent='Please connect to the internet for this website to work perfectly'
+})
+window.addEventListener("online", function() {
+  document.querySelector('.connected').textContent=''
+})

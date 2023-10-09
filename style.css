@@ -254,3 +254,12 @@ margin: 10px;
     font-weight: 800;
     color: var(--text-colour);
 }
+.connected{
+    position: absolute;
+    font-size: 1.4rem;
+    color:black;
+    width: auto;
+    left: 30%;
+    border-radius: 10px;
+    background-color: var(--green-yellow);
+}
