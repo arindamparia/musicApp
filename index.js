@@ -147,7 +147,7 @@ function createBtn(val, str) {
   btn.textContent = dashReplace(val);
   btn.classList.add("songButton");
   btn.addEventListener("click", () => {
-    //val=val.replaceAll(' ','_')
+    val=val.replaceAll(' ','_')
     const obj = songsData.find((value) => value.name === val);
     playSong(obj);
   });
@@ -256,6 +256,7 @@ function currentPlaylistShow(val) {
         createBtn(dashReplace(song.name)),
         removeEle,
       );
+
       currentPlaylistSongsEle.append(currentPlaylistSongsDivEle);
       removeEle.addEventListener("click", () => {
         const ind = playlistData[currentPlaylist].findIndex(
@@ -266,7 +267,6 @@ function currentPlaylistShow(val) {
       });
     });
   }
-  console.log(playlistData);
 }
 
 const bodyEl = document.querySelector("body");
