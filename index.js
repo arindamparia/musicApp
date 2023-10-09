@@ -129,7 +129,7 @@ document.getElementById("addPlaylist").addEventListener("click", () => {
       alert("Dear user, this song is already added in your selected playlist.");
     }
   } else {
-    if(playlistData.length===0) {
+    if(Object.keys(playlistData).length===0) {
       alert(
           "Dear user, please create a playlist first then tap on the created playlist to add songs in it.",
       );
